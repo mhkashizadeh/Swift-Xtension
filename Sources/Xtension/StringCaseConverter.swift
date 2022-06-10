@@ -9,11 +9,18 @@ extension String {
         }
     }
     
+    var lowerCammelCased: String {
+        get {
+            return CaseConvertor.convert(pattern: .lowerCamelCase, str: self)
+        }
+    }
+    
     
     class CaseConvertor {
         
         enum LetterCasePattern {
             case upperCamelCase
+            case lowerCamelCase
         }
         
         static func convert(pattern: LetterCasePattern, str: String) -> String {
@@ -22,6 +29,8 @@ extension String {
             switch pattern {
                 case .upperCamelCase:
                     return upperCamelCase(str: str)
+                case .lowerCamelCase:
+                    return lowerCamelCase(str: str)
             }
         }
         
@@ -43,5 +52,20 @@ extension String {
             
             return output
         }
+        
+        private static func lowerCamelCase(str: String) -> String{
+            var output = ""
+            let words = str.split(separator: " ")
+            for (index, word) in words.enumerated() {
+                if index == 0 {
+                    output = String(word)
+                }else {
+                    output += word.capitalized
+                }
+            }
+            
+            return output
+        }
+
     }
 }
