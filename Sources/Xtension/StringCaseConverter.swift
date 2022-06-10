@@ -1,33 +1,33 @@
 import Foundation
 
 
-extension String {
+public extension String {
     
-    public var upperCamelCased: String {
+    var upperCamelCased: String {
         get {
             return CaseConvertor.convert(pattern: .upperCamelCase, str: self)
         }
     }
     
-    public var lowerCamelCased: String {
+    var lowerCamelCased: String {
         get {
             return CaseConvertor.convert(pattern: .lowerCamelCase, str: self)
         }
     }
     
-    public var lowerSnakeCased: String {
+    var lowerSnakeCased: String {
         get {
             return CaseConvertor.convert(pattern: .lowerSnakeCase, str: self)
         }
     }
     
-    public var upperSnakeCased: String {
+    var upperSnakeCased: String {
         get {
             return CaseConvertor.convert(pattern: .upperSnakeCase, str: self)
         }
     }
     
-    public var kebabCased: String {
+    var kebabCased: String {
         get {
             return CaseConvertor.convert(pattern: .kebabCase, str: self)
         }
