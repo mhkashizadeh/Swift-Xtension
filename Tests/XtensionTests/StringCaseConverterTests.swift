@@ -18,6 +18,9 @@ final class StringCaseConverterTests: XCTestCase {
     func testUpperSnakeCaseConverter() {
         XCTAssertEqual("hello world".upperSnakeCased, "HELLO_WORLD")
     }
-
+    
+    func testKebabCaseConverter() {
+        XCTAssertEqual("hello world".kebabCased, "hello-world")
+    }
     
 }

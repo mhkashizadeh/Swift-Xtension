@@ -27,6 +27,11 @@ extension String {
         }
     }
     
+    var kebabCased: String {
+        get {
+            return CaseConvertor.convert(pattern: .kebabCase, str: self)
+        }
+    }
     
     class CaseConvertor {
         
@@ -35,6 +40,7 @@ extension String {
             case lowerCamelCase
             case lowerSnakeCase
             case upperSnakeCase
+            case kebabCase
         }
         
         static func convert(pattern: LetterCasePattern, str: String) -> String {
@@ -49,6 +55,9 @@ extension String {
                     return lowerSnakeCase(str: str)
                 case .upperSnakeCase:
                     return upperSnakeCase(str: str)
+                case .kebabCase:
+                    return kebabCase(str: str)
+
             }
         }
         
@@ -104,6 +113,19 @@ extension String {
         private static  func upperSnakeCase(str: String) -> String {
             return lowerSnakeCase(str: str).uppercased()
         }
-
+        
+        private static  func kebabCase(str: String) -> String {
+            var output = ""
+            let words = str.split(separator: " ")
+            for (index, word) in words.enumerated() {
+                if index == 0 {
+                    output = String(word)
+                } else {
+                    output += "-\(word)"
+                }
+            }
+            
+            return output
+        }
     }
 }
