@@ -1,2 +1,2 @@
-# swift-Xtension
+# Xtension
 Helpful swift extension
