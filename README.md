@@ -1,4 +1,3 @@
-[![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20tvOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)](https://github.com/SwifterSwift/swifterSwift)
 [![Swift](https://img.shields.io/badge/Swift-5.3-orange.svg)](https://swift.org)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/mhkashizadeh/Swift-Xtension/master?label=Build)
 [![Swift](https://github.com/mhkashizadeh/Swift-Xtension/actions/workflows/swift.yml/badge.svg)](https://github.com/mhkashizadeh/Swift-Xtension/actions/workflows/swift.yml)
