@@ -11,5 +11,13 @@ final class StringCaseConverterTests: XCTestCase {
         XCTAssertEqual("hello world".lowerCammelCased, "helloWorld")
     }
     
+    func testLowerSnakeCaseConverter() {
+        XCTAssertEqual("hello world".lowerSnakeCased, "hello_world")
+    }
+    
+    func testUpperSnakeCaseConverter() {
+        XCTAssertEqual("hello world".upperSnakeCased, "HELLO_WORLD")
+    }
+
     
 }

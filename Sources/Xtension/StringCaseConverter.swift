@@ -15,12 +15,26 @@ extension String {
         }
     }
     
+    var lowerSnakeCased: String {
+        get {
+            return CaseConvertor.convert(pattern: .lowerSnakeCase, str: self)
+        }
+    }
+    
+    var upperSnakeCased: String {
+        get {
+            return CaseConvertor.convert(pattern: .upperSnakeCase, str: self)
+        }
+    }
+    
     
     class CaseConvertor {
         
         enum LetterCasePattern {
             case upperCamelCase
             case lowerCamelCase
+            case lowerSnakeCase
+            case upperSnakeCase
         }
         
         static func convert(pattern: LetterCasePattern, str: String) -> String {
@@ -31,6 +45,10 @@ extension String {
                     return upperCamelCase(str: str)
                 case .lowerCamelCase:
                     return lowerCamelCase(str: str)
+                case .lowerSnakeCase:
+                    return lowerSnakeCase(str: str)
+                case .upperSnakeCase:
+                    return upperSnakeCase(str: str)
             }
         }
         
@@ -65,6 +83,26 @@ extension String {
             }
             
             return output
+        }
+        
+        
+        private static  func lowerSnakeCase(str: String) -> String {
+            var output = ""
+            let words = str.split(separator: " ")
+            for (index, word) in words.enumerated() {
+                if index == 0 {
+                    output = String(word)
+                } else {
+                    output += "_\(word)"
+                }
+            }
+            
+            return output
+        }
+
+        
+        private static  func upperSnakeCase(str: String) -> String {
+            return lowerSnakeCase(str: str).uppercased()
         }
 
     }
