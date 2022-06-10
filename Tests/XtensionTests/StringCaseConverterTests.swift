@@ -8,7 +8,7 @@ final class StringCaseConverterTests: XCTestCase {
     }
     
     func testLowerCamelCaseConverter() {
-        XCTAssertEqual("hello world".lowerCammelCased, "helloWorld")
+        XCTAssertEqual("hello world".lowerCamelCased, "helloWorld")
     }
     
     func testLowerSnakeCaseConverter() {

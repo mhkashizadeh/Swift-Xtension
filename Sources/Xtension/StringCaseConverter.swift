@@ -3,31 +3,31 @@ import Foundation
 
 extension String {
     
-    var upperCamelCased: String {
+    public var upperCamelCased: String {
         get {
             return CaseConvertor.convert(pattern: .upperCamelCase, str: self)
         }
     }
     
-    var lowerCammelCased: String {
+    public var lowerCamelCased: String {
         get {
             return CaseConvertor.convert(pattern: .lowerCamelCase, str: self)
         }
     }
     
-    var lowerSnakeCased: String {
+    public var lowerSnakeCased: String {
         get {
             return CaseConvertor.convert(pattern: .lowerSnakeCase, str: self)
         }
     }
     
-    var upperSnakeCased: String {
+    public var upperSnakeCased: String {
         get {
             return CaseConvertor.convert(pattern: .upperSnakeCase, str: self)
         }
     }
     
-    var kebabCased: String {
+    public var kebabCased: String {
         get {
             return CaseConvertor.convert(pattern: .kebabCase, str: self)
         }
@@ -57,7 +57,7 @@ extension String {
                     return upperSnakeCase(str: str)
                 case .kebabCase:
                     return kebabCase(str: str)
-
+                    
             }
         }
         
@@ -108,7 +108,7 @@ extension String {
             
             return output
         }
-
+        
         
         private static  func upperSnakeCase(str: String) -> String {
             return lowerSnakeCase(str: str).uppercased()
