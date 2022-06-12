@@ -23,5 +23,12 @@ Xtension is a collection of native Swift extensions
           <li>kebeb-case</li>
         </ul>
   </li>
+  <li>Validation 
+        <ul>
+          <li>Regex <code>"hello world".validate(pattern: #"(\w)\s(\w)"#)</code></li>
+          <li>Email <code>"mail@example.com".validate(pattern: .email)</code></li>
+          <li>Url <code>"http://www.example.com".validate(pattern: .url)</code></li>
+        </ul>
+  </li>
   </ul>
 </details>
