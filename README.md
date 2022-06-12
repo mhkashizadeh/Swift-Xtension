@@ -16,11 +16,11 @@ Xtension is a collection of native Swift extensions
   <ul>
     <li>Case Converter 
         <ul>
-          <li>UpperCamelCase</li>
-          <li>lowerCamelCase</li>
-          <li>lower_snake_case</li>
-          <li>UPPER_SNAKE_CASE</li>
-          <li>kebeb-case</li>
+          <li>UpperCamelCase <code>"hello world".upperCamelCased</code></li>
+          <li>lowerCamelCase <code>"hello world".lowerCamelCased</code></li>
+          <li>lower_snake_case <code>"hello world".lowerSnakeCased</code></li>
+          <li>UPPER_SNAKE_CASE <code>"hello world".upperSnakeCased</code></li>
+          <li>kebeb-case <code>"hello world".kebabCased</code></li>
         </ul>
   </li>
   <li>Validation 
