@@ -7,6 +7,23 @@ final class StringValidationTests: XCTestCase {
         XCTAssertEqual("hello world".validate(pattern: #"(\w)\s(\w)"#), true)
     }
     
+    func testAphabetValidation() {
+        XCTAssertEqual("Abc".validate(pattern: .alphabet), true)
+        XCTAssertEqual("hello world".validate(pattern: .alphabet), false)
+        XCTAssertEqual("@X".validate(pattern: .alphabet), false)
+        XCTAssertEqual("1234".validate(pattern: .alphabet), false)
+    }
+    
+    func testSentenceValidation() {
+        XCTAssertEqual("Abc".validate(pattern: .sentence), true)
+        XCTAssertEqual("hello world".validate(pattern: .sentence), true)
+    }
+    
+    func testAlphaNumbericValidation() {
+        XCTAssertEqual("Abc".validate(pattern: .alphnumberic), true)
+        XCTAssertEqual("Z560".validate(pattern: .alphnumberic), true)
+    }
+    
     func testEmailValidation() {
         XCTAssertEqual("mail@example.com".validate(pattern: .email), true)
         XCTAssertEqual("example.com".validate(pattern: .email), false)

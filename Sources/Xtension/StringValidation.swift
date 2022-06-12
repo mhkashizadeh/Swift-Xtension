@@ -4,9 +4,12 @@ import Foundation
 extension String {
     
     enum ValidationPattern:String {
+        case alphabet = #"^[A-Za-z]*$"#
+        case sentence = #"^[A-Za-z\s]*$"#
+        case alphnumberic = #"[A-Za-z0-9\.]*$"#
         case email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         case url = #"(?:(http|https):\/\/)?(?:\w+\.)?(\w+\.\w+)"#
-        case number = #"^[0-9](?:\.[0-9])?"#
+        case number = #"^(?:[0-9](?:\.[0-9])?)*$"#
         case zipcode = #"\d{5}-\d{4}|\d{5}"#
     }
     
