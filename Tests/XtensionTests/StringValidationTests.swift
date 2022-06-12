@@ -21,4 +21,11 @@ final class StringValidationTests: XCTestCase {
         XCTAssertEqual("https://sub.example.com".validate(pattern: .url), true)
         XCTAssertEqual("https://sub.example.com/index.html".validate(pattern: .url), true)
     }
+    
+    func testNumberValidation() {
+        XCTAssertEqual("123456".validate(pattern: .number), true)
+        XCTAssertEqual("3.14".validate(pattern: .number), true)
+        XCTAssertEqual("0.1".validate(pattern: .number), true)
+        XCTAssertEqual(".1".validate(pattern: .number), false)
+    }
 }

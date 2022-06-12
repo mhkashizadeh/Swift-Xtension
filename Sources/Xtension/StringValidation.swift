@@ -6,6 +6,7 @@ extension String {
     enum ValidationPattern:String {
         case email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         case url = #"(?:(http|https):\/\/)?(?:\w+\.)?(\w+\.\w+)"#
+        case number = #"^[0-9](?:\.[0-9])?"#
     }
     
     func validate(pattern: ValidationPattern) -> Bool{
@@ -27,12 +28,12 @@ extension String {
             in: self
         )
         
-        let result = regex.matches(
+        let result = regex.numberOfMatches(
             in: self,
             options: [],
             range: sourceRange
         )
-        
-        return !result.isEmpty
+
+        return result != 0
     }
 }
