@@ -8,3 +8,20 @@
 # Xtension
 
 Xtension is a collection of native Swift extensions
+
+## Extension
+<details>
+  <summary>String</summary>
+  </br>
+  <ul>
+    <li>Case Converter 
+        <ul>
+          <li>UpperCamelCase</li>
+          <li>lowerCamelCase</li>
+          <li>lower_snake_case</li>
+          <li>UPPER_SNAKE_CASE</li>
+          <li>kebeb-case</li>
+        </ul>
+  </li>
+  </ul>
+</details>
