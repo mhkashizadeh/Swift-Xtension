@@ -20,8 +20,8 @@ final class StringValidationTests: XCTestCase {
     }
     
     func testAlphaNumbericValidation() {
-        XCTAssertEqual("Abc".validate(pattern: .alphnumberic), true)
-        XCTAssertEqual("Z560".validate(pattern: .alphnumberic), true)
+        XCTAssertEqual("Abc".validate(pattern: .alphnumeric), true)
+        XCTAssertEqual("Z560".validate(pattern: .alphnumeric), true)
     }
     
     func testEmailValidation() {
