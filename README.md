@@ -26,6 +26,9 @@ Xtension is a collection of native Swift extensions
   <li>Validation 
         <ul>
           <li>Regex <code>"hello world".validate(pattern: #"(\w)\s(\w)"#)</code></li>
+          <li>Alphabet <code>"hello world".validate(pattern: .alphabet)</code></li>
+          <li>Sentence <code>"hello world".validate(pattern: .sentence)</code></li>
+          <li>Alphanumeric <code>"hello world".validate(pattern: .alphanumeric)</code></li>
           <li>Email <code>"mail@example.com".validate(pattern: .email)</code></li>
           <li>Url <code>"http://www.example.com".validate(pattern: .url)</code></li>
         </ul>
