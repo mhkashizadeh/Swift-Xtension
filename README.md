@@ -35,3 +35,25 @@ Xtension is a collection of native Swift extensions
   </li>
   </ul>
 </details>
+
+## Installation
+### Swift Package Manager
+Add the following code to your `Package.swift` :
+
+```
+dependencies: [
+    .package(url: "https://github.com/mhkashizadeh/Swift-Xtension.git", from: "0.1.5")
+],
+targets: {
+    .target(name: "YourTarget", dependencies: ["Swift-Xtension"])
+}
+```
+
+## Usage
+Just import
+```swift
+import Xtension
+```
+
+
+
