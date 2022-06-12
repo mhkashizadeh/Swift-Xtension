@@ -7,6 +7,7 @@ extension String {
         case email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         case url = #"(?:(http|https):\/\/)?(?:\w+\.)?(\w+\.\w+)"#
         case number = #"^[0-9](?:\.[0-9])?"#
+        case zipcode = #"\d{5}-\d{4}|\d{5}"#
     }
     
     func validate(pattern: ValidationPattern) -> Bool{

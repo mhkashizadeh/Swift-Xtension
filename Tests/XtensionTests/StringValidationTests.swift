@@ -28,4 +28,9 @@ final class StringValidationTests: XCTestCase {
         XCTAssertEqual("0.1".validate(pattern: .number), true)
         XCTAssertEqual(".1".validate(pattern: .number), false)
     }
+    
+    func testZipcodeValidation() {
+        XCTAssertEqual("90807".validate(pattern: .zipcode), true)
+        XCTAssertEqual("92064-3404".validate(pattern: .zipcode), true)
+    }
 }
