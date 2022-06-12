@@ -55,5 +55,12 @@ Just import
 import Xtension
 ```
 
+## Tests
+Tests can be found [here](https://github.com/mhkashizadeh/Swift-Xtension/tree/master/Tests).
+
+Run them with
+```
+swift test
+```
 
 
